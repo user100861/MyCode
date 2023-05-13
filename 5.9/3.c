@@ -1,48 +1,44 @@
 #include <stdio.h>
-void GetMin(int *p, int m, int n, int *b)
-{
-    for (n; n < 3; n++)
-    {
-        if (*(p + n) < *b)
-        {
-            *b = *(p + n);
-            *(b + 1) = m;
-            *(b + 2) = n;
-        }
-    }
-}
+#define N 2
+#define M 3
 int main()
 {
-    int *p[2];
-    int m = 0;
-    int n = 0;
-    int *b;
-    int a[2][3];
-    int calc;
-    for (m; m < 2; m++)
-    {
-        for (n; n < 3; n++)
+
+    int a[N][M];
+
+    int(*p)[M] = a;
+
+    int i, j, sum;
+    int q, l;
+    int min = 100;
+
+    /********** Begin *********/
+    for (i = 0; i < N; i++)
+
+        for (j = 0; j < M; j++)
+
         {
-            scanf("%d", &a[m][n]);
+
+            scanf("%d", *(p + i) + j);
         }
-        n = 0;
-    }
-    m = 0;
-    for (m; m < 2; m++)
+
+    for (i = 0; i < N; i++)
+
     {
-        p[m] = &a[m][0];
-    }
-    m = 0;
-    b = &calc;
-    // for (m; m < 3; m++)
-    //     calc[m] = 0;
-    calc = 100;
-    for (m; m < 2; m++)
-    {
-        for (n; n < 3; n++)
+
+        for (j = 0; j < M; j++)
         {
-            GetMin(p[m], m, n, b);
+            if (*(*(p + i) + j) <= min)
+            {
+                min = *(*(p + i) + j);
+                q = j;
+                l = i;
+            }
         }
     }
-    printf("min=%d,%d,%d", calc, *(b + 1), *(b + 2));
+    printf("min=%d,%d,%d\n", min, ++l, ++q);
+
+    /********** End **********/
+
+    return 0;
 }
