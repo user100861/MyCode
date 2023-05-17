@@ -4,9 +4,9 @@ void GetOdd(int a[], int *b, int *m)
     int i = 0;
     for (i; i < 9; i++)
     {
-        if (a[i] % 2 != 0)
+        if (a[i] % 2 == 0)
         {
-            *(b + i) = a[i];
+            *(b + i) = 0;
         }
     }
 }
@@ -20,16 +20,13 @@ int main()
         scanf("%d", &a[i]);
     }
     i = 0;
-    for (i; i < 9; i++)
-    {
-        *(b + i) = 0;
-    }
+    b = &a[0];
     GetOdd(a, b, m);
     for (i; i < 9; i++)
     {
-        // if (a[i] != 0)
-        // {
-        printf("%d ", *(b + i));
-        // }
+        if (a[i] != 0)
+        {
+            printf("%d ", a[i]);
+        }
     }
 }
