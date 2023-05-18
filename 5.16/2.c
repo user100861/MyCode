@@ -15,6 +15,7 @@ int main()
     int a[9];
     int *b, *m;
     int i = 0;
+    int t = 0;
     for (i; i < 9; i++)
     {
         scanf("%d", &a[i]);
@@ -27,6 +28,11 @@ int main()
         if (a[i] != 0)
         {
             printf("%d ", a[i]);
+            t = 1;
         }
+    }
+    if (t == 0)
+    {
+        printf("NO");
     }
 }
