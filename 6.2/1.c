@@ -35,8 +35,8 @@ int main()
     int min, max, num1, num2;
     scanf("%d %d", &num1, &num2);
     int i = 0;
-    &min;
-    &max;
+    // &min;
+    // &max;
     if (num1 > num2)
     {
         max = num1;
