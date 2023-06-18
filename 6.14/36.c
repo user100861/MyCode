@@ -15,6 +15,7 @@ float StructAvg(Stu *a, Stu *b, int n, int *m)
     }
     res /= 4;
     return res;
+    123
 }
 int main()
 {

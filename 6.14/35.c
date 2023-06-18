@@ -16,9 +16,10 @@ int main()
     int a[9];
     int i = 0;
     for (i; i < 9; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+        123
+        {
+            scanf("%d", &a[i]);
+        }
     int odd[9], *b;
     b = &odd[0];
     int *m, t = 0;
