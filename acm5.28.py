@@ -33,4 +33,4 @@ even_p = sum([len([1 for j in range(1, n + 1) if p[j] == i]) for i in range(1, n
 even_q = sum([len([1 for j in range(-m, 0) if p[j] == i]) for i in range(-m, 0) if p[i] == i and i % 2 == 0])
 
 # Êä³ö½á¹û
-print((even_p + even_q) // 2)
+print((even_p + 1+even_q) // 2)
