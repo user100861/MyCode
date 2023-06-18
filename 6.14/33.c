@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-int GetData3(int a[], int n)
+int DelOdd(int a[], int n)
 {
     int i = 0;
-    int cnt = 0;
+    int count = n;
     for (i; i < n; i++)
     {
-        if (a[i] % 3 == 0)
+        if (a[i] % 2)
         {
-            cnt++;
+            count--;
         }
     }
-    return cnt;
+    return count;
 }
 int main()
 {
@@ -28,20 +28,20 @@ int main()
     i = 0;
     for (i; i < n; i++)
     {
-        printf("%d ", ++randa[i]);
+        printf("%d\t", ++randa[i]);
         if ((i + 1) % 10 == 0)
             printf("\n");
     }
     i = 0;
-    printf("%d\n", GetData3(randa, n));
+    printf("%d\n", DelOdd(randa, n));
     int count = 0;
     for (i; i < n; i++)
     {
-        if (randa[i] % 3 == 0)
+        if (randa[i] % 2 == 0)
         {
-            printf("%d ", randa[i]);
+            printf("%d\t", randa[i]);
             count++;
-            if ((count + 1) % 10 == 0)
+            if (count % 10 == 0)
             {
                 printf("\n");
             }
